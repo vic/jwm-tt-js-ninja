@@ -1,0 +1,24 @@
+h1. Becomming a JavaScript Ninja
+
+A ShowOff presentation for a techtalk at JWM Solutions.
+
+h2. Audience
+
+Developer
+
+h2. Objective
+
+Teach the art and craft of JavaScript.
+
+h2. Overview
+
+* JavaScript the new platform. (2 mins)
+
+  Talk about why JS is important, and why
+  its important to write beautiful code.
+
+* Code Katas.
+  - Dont polute global namespace.
+  - Functionall programming ( underscore.js )  
+  - CommonJS modules.
+
