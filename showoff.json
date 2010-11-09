@@ -1,6 +1,15 @@
 {
     "name": "Becoming a JavaScript Ninja",
     "sections": [
-        { "section": "intro" }
+        { "section": "intro" },
+        { "section": "literals" },
+        { "section": "functions" },
+        { "section": "closures" },
+        { "section": "modules" },
+        { "section": "augmenting" },
+        { "section": "inheritance" },
+        { "section": "bad-parts" },
+        { "section": "libraries" },
+        { "section": "quality" }
     ]
 }
