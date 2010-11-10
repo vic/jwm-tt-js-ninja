@@ -9,6 +9,7 @@
         { "section": "augmenting" },
         { "section": "inheritance" },
         { "section": "bad-parts" },
+        { "section": "devtools" },
         { "section": "libraries" },
         { "section": "quality" }
     ]
