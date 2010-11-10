@@ -10,6 +10,7 @@
 * As an app grows, bad things happen
 * What about mashups?
 * Don't pollute the global namespace!
+* Like all martial arts requires discipline
 
 !SLIDE bullets incremental
 # new #
@@ -38,6 +39,7 @@
 # != and == #
 
 ## Will compare values of different types ##
+## ( automatic type coercion ) ##
 
     @@@ javaScript
     CORE.out( '' == '0' );
@@ -55,6 +57,9 @@
 !SLIDE
 # Semicolon insertion #
 
+## Optional but may cause problems with some minimizers. ##
+
 !SLIDE
 # eval #
 
+## Try to avoid it whenever possible ##
