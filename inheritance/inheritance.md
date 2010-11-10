@@ -118,6 +118,7 @@
 # Pure prototypal inheritance #
 
 * Very simple
+* "Differential" inheritance
 * No longer need to use __new__
 * Don't have to worry about __prototype__
 * Still no encapsulation

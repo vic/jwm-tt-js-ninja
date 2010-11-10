@@ -9,7 +9,7 @@
     my_link.bind('click', function(e) {
         e.preventDefault();
         alert('You cliked the link');
-    }
+    };
 
     setTimeout(function() {
         alert('Timeout triggered');
@@ -39,9 +39,9 @@
                 return myPrivateVar.toUpperCase();
             },
             doSomethingElse: function() {
-                return myPrivateMethod();
+                myPrivateMethod();
             }
-        }
+        };
     })();
     CORE.out(mySingleton.doSomething());
     CORE.out(mySingleton.myPrivateVar);
