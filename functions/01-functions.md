@@ -11,15 +11,7 @@
 * Only way to have scope
 
 !SLIDE bullets incremental
-# Function invocation patterns #
-
-* Function invocation pattern
-* Method invocation pattern
-* Constructor invocation pattern
-* Apply / Call invocation pattern
-
-!SLIDE
-# Function  #
+# Function #
 
 * Functions blocks of code (create an scope) that can be activated.
 * They dont care about having a name
