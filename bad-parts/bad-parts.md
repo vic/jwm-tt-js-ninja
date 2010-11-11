@@ -76,7 +76,29 @@
     CORE.out( output );
     CORE.out( output && output.status );
 
-!SLIDE
+!SLIDE bullets incremental
 # eval #
 
-## Try to avoid it whenever possible ##
+* _eval_ is evil
+* Harder to read
+* Slower (needs to run the compiler)
+* Can compromise security
+* Try to avoid it whenever possible
+
+!SLIDE execute
+# Reserved words #
+
+    @@@ javaScript
+    abstract boolean break byte
+    case catch char class const continue
+    debugger default delete do double
+    else enum export extends
+    false final finally float for function goto
+    if implements import in instanceof int
+    interface long native new null
+    package private protected public return
+    short static super switch synchronized
+    this throw throws transient true try typeof
+    var volatile void while with
+
+
