@@ -7,32 +7,34 @@
 # Think of them as light hashmaps. #
 
     @@@ javaScript
-    var person = { name: "Joe" age: 28 };
+    var person = { name: "Joe", age: 28 };
 
 !SLIDE
 
 # Everything is accessible. #
 
     @@@ javaScript
-    person.name = "Bad"
-    person["name"] = "Ugly"
+    person.name = "Bad";
+    person["name"] = "Ugly";
 
 
 !SLIDE subsection
 
 # Arrays #
 
-!SLIDE
+!SLIDE execute
 # Untyped collections #
 
-     @@@ javaScript
-     var clients = [ posadas, telcel, palacio ]
-     clients.length // -> 3
+    @@@ javaScript
+    var clients = [
+        'posadas', 'telcel', 'palacio'
+    ];
+    result = clients.length; // -> 3
 
-!SLIDE
+!SLIDE execute
 # Undefined values #
 ## pretty much everything not available in scope ##
 
-      @@@ javaScript
-      typeof(something) == "undefined"
+    @@@ javaScript
+    result = typeof(something) === "undefined";
 
