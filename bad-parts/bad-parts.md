@@ -54,10 +54,27 @@
 
 ## Use __!==__ and __===__ instead ##
 
-!SLIDE
+!SLIDE bullets incremental
 # Semicolon insertion #
 
-## Optional but may cause problems with some minimizers. ##
+* Missing semicolons are automatically inserted
+* Optional but may cause problems with some minimizers
+* It can mask more serious errors
+* Don't depend on this
+
+!SLIDE execute
+# Semicolon insertion #
+
+    @@@ javaScript
+    var output = function() {
+        return
+        {
+            status: true
+        }
+    }();
+
+    CORE.out( output );
+    CORE.out( output && output.status );
 
 !SLIDE
 # eval #
