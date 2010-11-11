@@ -11,6 +11,7 @@
         { "section": "bad-parts" },
         { "section": "devtools" },
         { "section": "libraries" },
-        { "section": "quality" }
+        { "section": "quality" },
+        { "section": "outro" }
     ]
 }
