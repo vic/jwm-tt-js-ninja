@@ -1,30 +1,47 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Functions #
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Functional language #
 
 * Functions are first class citizens
 * Functions are objects
-* Function statement vs function expression
 * Only way to have scope
 
-!SLIDE bullets incremental
+!SLIDE execute transition=scrollUp
+# Statement vs Expression #
+
+    @@@ javaScript
+    // statement
+    function foo() {}
+
+    // expressions
+    var foo = function foo() {};
+    var foo = function() {};
+
+    var fibonacci = function fib(n) {
+        return n < 2 ? n : fib(n-1) + fib(n-2);
+    };
+
+    CORE.out( typeof fib );
+    CORE.out( fibonacci(10) );
+
+!SLIDE bullets incremental transition=scrollUp
 # Function #
 
 * Functions blocks of code (create an scope) that can be activated.
 * They dont care about having a name
 * They dont care about defining arguments
 
-!SLIDE
+!SLIDE transition=scrollUp
 # Anonymous funtions #
 # They dont care about having a name #
 
     @@@ javaScript
     (function(msg){ alert("hello "+msg); })("world");
 
-!SLIDE
+!SLIDE transition=scrollUp
 # dynamic function arguments #
 # They dont care about defining arguments #
 
@@ -41,7 +58,7 @@
     fun();
     fun("hey", "thats" "cool");
 
-!SLIDE
+!SLIDE transition=scrollUp
 # Anonymous funtions #
 # They dont care about defining arguments #
 
@@ -52,7 +69,7 @@
     fun();
     fun("hey", "thats" "cool");
 
-!SLIDE
+!SLIDE transition=scrollUp
 # Self referencing funtions #
 # Functions are just values #
 
