@@ -1,4 +1,4 @@
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Pure prototypal inheritance #
 
     @@@ javaScript
@@ -8,7 +8,7 @@
         return new F();
     };
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Pure prototypal inheritance #
 
     @@@ javaScript
@@ -27,7 +27,7 @@
     myCat.get_name();
     myCat.say_meow();
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 
     @@@ javaScript
     var cat = {
@@ -45,7 +45,7 @@
     kitten.get_name();
     kitten.say_meow();
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Pure prototypal inheritance #
 
 * Very simple

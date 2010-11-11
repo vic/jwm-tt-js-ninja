@@ -1,4 +1,4 @@
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Constructors #
 
     @@@ javaScript
@@ -9,7 +9,7 @@
     var myCat = new Cat("micha");
     CORE.out( myCat.name );
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Constructor prototype #
 
     @@@ javaScript
@@ -27,7 +27,7 @@
     myCat.get_name();
     myCat.say_meow();
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Pseudoclassical inheritance #
 
     @@@ javaScript
@@ -48,7 +48,7 @@
     myKitten.say_meow();
     myKitten.purr();
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Problems #
 
 * No encapsulation

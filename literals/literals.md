@@ -1,15 +1,15 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Objects #
 
-!SLIDE
+!SLIDE transition=scrollUp
 
 # Think of them as light hashmaps. #
 
     @@@ javaScript
     var person = { name: "Joe", age: 28 };
 
-!SLIDE
+!SLIDE transition=scrollUp
 
 # Everything is accessible. #
 
@@ -18,11 +18,11 @@
     person["name"] = "Ugly";
 
 
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Arrays #
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Untyped collections #
 
     @@@ javaScript
@@ -31,7 +31,7 @@
     ];
     result = clients.length; // -> 3
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Undefined values #
 ## pretty much everything not available in scope ##
 

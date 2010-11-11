@@ -1,14 +1,14 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Coffee Script #
 
-!SLIDE
+!SLIDE transition=scrollUp
 
 # Cofee Script #
 ## Javascript the way it was meant to be ##
 ### A javascript language ###
 
-!SLIDE
+!SLIDE transition=scrollUp
 # Syntax examples #
 
 

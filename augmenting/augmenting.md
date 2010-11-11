@@ -1,8 +1,8 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Basic types #
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Augmenting the basic types #
 
 * Function.prototype

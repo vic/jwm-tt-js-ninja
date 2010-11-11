@@ -1,27 +1,23 @@
 !SLIDE
 # Becoming a JavaScript Ninja #
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # How did you learn JavaScript? #
 
 * Read the spec, tutorials, examples, etc.
 * Started hacking because it looks like Java
 
-!SLIDE smbullets incremental
+!SLIDE smbullets incremental transition=scrollUp
 # Quick overview #
 
-* Breif history of the language
-* Object / Array literals
+* Object literals
 * Functional language (lambda!)
-* Function invocation patterns
 * Closures
 * Modules and scope
 * Augmenting the basic types
 * Inheritance
 * Bad parts
+* Dev tools
 * Libraries
-* JSLint
-
-!SLIDE
-# JavaScript's history #
+* Quality
 

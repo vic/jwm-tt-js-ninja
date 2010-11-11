@@ -1,8 +1,8 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Bad parts #
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Global variables #
 
 * JavaScript doesn't have a linker
@@ -12,14 +12,14 @@
 * Don't pollute the global namespace!
 * Like all martial arts requires discipline
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # new #
 
 * What happens when you invoke a constructor without new?
 * It's a normal function call
 * __this__ is bound to the global namespace
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Scope #
 
 ## No block scope in JavaScript ##
@@ -35,7 +35,7 @@
     CORE.out(foo);
 ## Declare variables at the start of functions ##
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # != and == #
 
 ## Will compare values of different types ##
@@ -54,7 +54,7 @@
 
 ## Use __!==__ and __===__ instead ##
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Semicolon insertion #
 
 * Missing semicolons are automatically inserted
@@ -62,7 +62,7 @@
 * It can mask more serious errors
 * Don't depend on this
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Semicolon insertion #
 
     @@@ javaScript
@@ -76,7 +76,7 @@
     CORE.out( output );
     CORE.out( output && output.status );
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # eval #
 
 * _eval_ is evil
@@ -85,7 +85,7 @@
 * Can compromise security
 * Try to avoid it whenever possible
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Reserved words #
 
     @@@ javaScript

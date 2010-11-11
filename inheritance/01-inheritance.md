@@ -1,8 +1,8 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Inheritance #
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Prototypal inheritance #
 
 * No classes in JavaScript, only objects

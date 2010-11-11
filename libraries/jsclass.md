@@ -1,8 +1,8 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 # JSClass #
 
 
-!SLIDE bullets
+!SLIDE bullets transition=scrollUp
 # Javascript with Ruby flavour #
 
 * Imitates Ruby's object model.

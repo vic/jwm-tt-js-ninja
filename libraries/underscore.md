@@ -1,11 +1,10 @@
-
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Underscore.js #
 
 * Quick overview
 * Use _.mixin() to add your functions (don't augment the basic types)
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Functional Programming #
 
 * Mathematical pure-functions.
@@ -13,7 +12,7 @@
 * Functional style programming.
 * Everything under the _ namespace.
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Underscore / Objects #
 * keys/values
 * extend
@@ -21,7 +20,7 @@
 * tap
 
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Underscore / Collections #
 
 * each
@@ -29,14 +28,14 @@
 * sortBy
 * select/reject/include/all
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Underscore Collections Example #
 
     @@@ javaScript
     some underscore examples
 
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Underscore / Functions #
 * defer
 * bind

@@ -1,8 +1,8 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Closures #
 
-!SLIDE
+!SLIDE transition=scrollUp
 
 # Closures ? #
 
@@ -18,14 +18,14 @@
     var twice = mult(2);
     twice(12); // -> 24
 
-!SLIDE bullets
+!SLIDE bullets transition=scrollUp
 
 # Why do I need them? #
 
 * Real Private access.
 * Only expose your API interface.
 
-!SLIDE
+!SLIDE transition=scrollUp
 
 # Closures Example  #
 

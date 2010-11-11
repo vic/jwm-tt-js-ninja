@@ -1,4 +1,4 @@
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Function invocation patterns #
 
 * Function invocation pattern
@@ -6,7 +6,7 @@
 * Constructor invocation pattern
 * Apply / Call invocation pattern
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Function #
 
 ## Function is __not__ a property of an object ##
@@ -20,7 +20,7 @@
     };
     result = get_name();
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Method #
 
 ## Function __is__ a property of an object ##
@@ -36,12 +36,12 @@
     };
     result = person.get_name();
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Constructor #
 
 ## Function is invoked with __new__ prefix ##
 ## __this__ is bound to a new object ##
-## The object will have hidden link to the function's prototype ##
+## The object will have a hidden link to the function's prototype ##
 
     @@@ javaScript
 
@@ -50,9 +50,10 @@
     };
     var someone = new Person();
     var someone_else = new Person();
-    result = someone === someone_else;
+    CORE.out(someone === someone_else);
+    CORE.out(someone.name === someone_else.name);
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Apply / Call #
 
 ## Functions can have methods ##
@@ -68,7 +69,7 @@
     CORE.out( person.greet() );
     CORE.out( person.greet.apply({name: 'John'}) );
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Apply / Call #
 
     @@@ javaScript

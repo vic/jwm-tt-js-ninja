@@ -1,11 +1,11 @@
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # Power constructors #
 
 * Object factories
 * Use functions to have scope
 * Very similar to singleton pattern
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 
     @@@ javaScript
     var cat = function(name) {
@@ -28,7 +28,7 @@
     myCat.say_meow();
     CORE.out(typeof myCat.do_meow);
 
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # "Parasitic" inheritance #
 
 * Create a new object
@@ -36,7 +36,7 @@
 * Augment the new object with methods
 * Return the new object
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 
     @@@ javaScript
     var cat = function(spec) {
@@ -60,7 +60,7 @@
     myCat.say_meow();
     CORE.out(typeof myCat.do_meow);
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 
     @@@ javaScript
     var cat = function(spec) {

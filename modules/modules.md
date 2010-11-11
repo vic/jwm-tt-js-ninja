@@ -1,8 +1,8 @@
-!SLIDE subsection
+!SLIDE subsection transition=scrollUp
 
 # Modules #
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Anonymous functions #
 
     @@@ javaScript
@@ -15,7 +15,7 @@
         alert('Timeout triggered');
     }, 100);
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Scope #
 
     @@@ javaScript
@@ -25,7 +25,7 @@
     })();
     CORE.out(typeof myPrivateProperty);
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Singleton with encapsulation #
 
     @@@ javaScript

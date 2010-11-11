@@ -1,5 +1,4 @@
-
-!SLIDE bullets incremental
+!SLIDE bullets incremental transition=scrollUp
 # CommonJS #
 
 * Modules
@@ -8,26 +7,26 @@
 * Large javascript libraries.
 * RequireJS - browser side.
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # RequireJS Module Structure #
 
     @@@ javaScript
     example
 
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # RequireJS Module Definition #
 
     @@@ javaScript
     example
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Using RequireJS on the browser #
 
     @@@ javaScript
     example
 
-!SLIDE execute
+!SLIDE execute transition=scrollUp
 # Dependency management #
 
     @@@ javaScript
