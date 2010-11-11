@@ -8,8 +8,9 @@
 * Started hacking because it looks like Java
 
 !SLIDE smbullets incremental transition=scrollUp
-# Quick overview #
+# Overview #
 
+* Quick intro
 * Object literals
 * Functional language (lambda!)
 * Closures
@@ -20,4 +21,22 @@
 * Dev tools
 * Libraries
 * Quality
+
+!SLIDE bullets incremental small transition=scrollUp
+# Breif history #
+
+* 1995 - LiveScript (Netscape: Brendan Eich)
+* Renamed to JavaScript - Netscape and Sun marketing deal?
+* 1996 - Microsoft's JScript (trademark issues)
+* Battle between Netscape and Microsoft
+* 1997 - ECMAScript (standarization)
+* 1998 - W3C DOM Level 1
+
+!SLIDE bullets incremental transition=scrollUp
+# Influences #
+
+* __Self__: prototypal inheritance, dynamic objects
+* __Scheme__: lambda, loose typing
+* __Java__: syntax, conventions
+* __Perl__: regular expressions
 
