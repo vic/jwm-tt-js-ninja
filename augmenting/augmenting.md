@@ -11,7 +11,7 @@
 * Array.prototype
 * Number.prototype
 
-!SLIDE execute transition=scrollUp
+!SLIDE execute small transition=scrollUp
 # Integer part of a number #
 
     @@@ javaScript

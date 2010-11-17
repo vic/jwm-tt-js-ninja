@@ -101,4 +101,14 @@
     this throw throws transient true try typeof
     var volatile void while with
 
+!SLIDE execute transition=scrollUp
+# typeof & NaN #
+
+    @@@ javaScript
+
+    CORE.out( typeof null );
+    CORE.out( typeof NaN );
+
+    CORE.out( NaN === NaN );
+    CORE.out( isNaN(NaN) );
 
