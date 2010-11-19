@@ -1,6 +1,8 @@
 !SLIDE
 # Becoming a JavaScript Ninja #
 
+### [http://vic.github.com/jwm-tt-js-ninja](http://vic.github.com/jwm-tt-js-ninja) ###
+
 !SLIDE bullets incremental transition=scrollUp
 # How did you learn JavaScript? #
 

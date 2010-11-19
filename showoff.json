@@ -3,6 +3,7 @@
     "sections": [
         { "section": "intro" },
         { "section": "literals" },
+        { "section": "expressions" },
         { "section": "functions" },
         { "section": "closures" },
         { "section": "modules" },

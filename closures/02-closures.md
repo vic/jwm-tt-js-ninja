@@ -16,7 +16,8 @@
         }
     }
     var twice = mult(2);
-    twice(12); // -> 24
+    CORE.out( twice(12) );
+    CORE.out( mult(12)(12) );
 
 !SLIDE bullets transition=scrollUp
 
@@ -32,9 +33,9 @@
     @@@ javaScript
     var obtainAPI = function(url) {
         var thisIsPrivate = someOperation(url);
-        var doBla = funcion(a, callback) {
-            var response = another(thisIsPrivate + a);
-            callback(response);
+        var foo = funcion(a, callback) {
+            var res = foo(thisIsPrivate + a);
+            callback(res);
         }
         return {
             exposedMethod: doBlah

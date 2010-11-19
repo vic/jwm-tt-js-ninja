@@ -1,29 +1,12 @@
 !SLIDE subsection transition=scrollUp
 
-# Modules #
+# Encapsulation #
 
-!SLIDE execute transition=scrollUp
-# Anonymous functions #
+!SLIDE bullets transition=scrollUp
 
-    @@@ javaScript
-    my_link.bind('click', function(e) {
-        e.preventDefault();
-        alert('You cliked the link');
-    };
+# Plain javascript objects #
 
-    setTimeout(function() {
-        alert('Timeout triggered');
-    }, 100);
-
-!SLIDE execute transition=scrollUp
-# Scope #
-
-    @@@ javaScript
-    (function() {
-        var myPrivateProperty = 'hello world';
-        CORE.out(myPrivateProperty);
-    })();
-    CORE.out(typeof myPrivateProperty);
+## having values/functions as properties ##
 
 !SLIDE execute transition=scrollUp
 # Singleton with encapsulation #

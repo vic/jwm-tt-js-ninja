@@ -40,6 +40,7 @@
     CORE.out( typeof bar ); // undefined
 
 !SLIDE execute transition=scrollUp
+# Advice #
 ## Always use try to use expressions ###
 
     @@@ javaScript
@@ -49,11 +50,23 @@
 
 
 !SLIDE bullets incremental transition=scrollUp
-# Function #
+# Functions #
 
-* Functions blocks of code (create an scope) that can be activated.
-* They dont even need a name
-* They dont need a fixed set of parameters
+* dont even need a name
+* dont need a fixed set of parameters
+
+!SLIDE execute transition=scrollUp
+# Anonymous functions #
+
+    @@@ javaScript
+    my_link.bind('click', function(e) {
+        e.preventDefault();
+        alert('You cliked the link');
+    };
+
+    setTimeout(function() {
+        alert('Timeout triggered');
+    }, 100);
 
 !SLIDE execute transition=scrollUp
 # Anonymous funtions #
