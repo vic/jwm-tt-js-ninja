@@ -10,76 +10,113 @@
 * Only way to have scope
 
 !SLIDE execute transition=scrollUp
-# Statement vs Expression #
+# Function definition statement #
+## imperative style ##
 
     @@@ javaScript
     // statement
     function foo() {}
 
-    // expressions
-    var foo = function foo() {};
-    var foo = function() {};
+    CORE.out( typeof foo );
 
-    var fibonacci = function fib(n) {
-        return n < 2 ? n : fib(n-1) + fib(n-2);
-    };
+!SLIDE execute transition=scrollUp
+# Function definition expression #
+## functional style ##
 
-    CORE.out( typeof fib );
-    CORE.out( fibonacci(10) );
+    @@@ javaScript
+    // expression
+    var foo = function() {}
+
+    CORE.out( typeof foo );
+
+
+!SLIDE execute transition=scrollUp
+# But wait .. what if I try to combine them #
+
+    @@@ javaScript
+    var foo = function bar() {}
+
+    CORE.out( typeof foo ); // function
+    CORE.out( typeof bar ); // undefined
+
+!SLIDE execute transition=scrollUp
+## Always use try to use expressions ###
+
+    @@@ javaScript
+    // Assign anonymous functions to
+    // scoped variables.
+    var foo = function() {  }
+
 
 !SLIDE bullets incremental transition=scrollUp
 # Function #
 
 * Functions blocks of code (create an scope) that can be activated.
-* They dont care about having a name
-* They dont care about defining arguments
+* They dont even need a name
+* They dont need a fixed set of parameters
 
-!SLIDE transition=scrollUp
+!SLIDE execute transition=scrollUp
 # Anonymous funtions #
-# They dont care about having a name #
+## dont need to be named ##
 
     @@@ javaScript
-    (function(msg){ alert("hello "+msg); })("world");
+    (function(msg){
+      alert("hello "+msg);
+     })("world");
+
+!SLIDE execute transition=scrollUp
+# Anonymous funtions #
+## weak typed / unchecked arity ##
+
+    @@@ javaScript
+    var fun = function(a, b) {
+      CORE.out( a + b );
+    }
+    fun();
+    fun("hey");
+    fun("whats", "up");
+    fun(14, 10);
+    fun("weak", 10);
 
 !SLIDE transition=scrollUp
 # dynamic function arguments #
-# They dont care about defining arguments #
+## you can use the special __arguments__ object ##
 
     @@@ javaScript
-    var fun = function() { // no argument list .. but
-       alert(arguments.length); // not a real array though
-       // bad thing is you have to manually obtain and
-       // determine earch argument meaning.
+    var fun = function() { // no parameter names
+       CORE.out(arguments.length);
        var name = arguments[0];
-       if(! arguments[1]) {
-         // no second argument provided.
+       if("function" === typeof(arguments[1])) {
+         CORE.out("second argument is a function");
        }
     }
     fun();
-    fun("hey", "thats" "cool");
+    fun("hey", function() { foo }, "this");
 
-!SLIDE transition=scrollUp
-# Anonymous funtions #
-# They dont care about defining arguments #
+!SLIDE execute transition=scrollUp
+# Self referencing functions #
+## __arguments.callee__ holds a reference to itself ##
 
     @@@ javaScript
-    var fun = function() { // no argument list .. but
-       alert(arguments.length); // not a real array though
+    var fun = function() {
+       CORE.out( arguments.callee.toString() );
     }
     fun();
-    fun("hey", "thats" "cool");
 
 !SLIDE transition=scrollUp
-# Self referencing funtions #
-# Functions are just values #
+# Self referencing functions #
+## __arguments.callee__ holds a reference to itself ##
 
     @@@ javaScript
-    var fun = function(arg) { // no argument list .. but
-       var self = arguments.callee ; // the function being executed
+    var fun = function(arg) {
+       // the function being executed
+       var self = arguments.callee;
 
        // this can be useful for memoizing data
-       self.cache = self.cache || {}
-       var cached = self.cache[arg] || expensiveOperation(arg);
+       var cache = self.cache || {}
+         , value = self.cache[arg] || exp(arg);
+       self.cache[arg] = value;
+
        return cached;
     }
     fun("something");
