@@ -27,6 +27,18 @@
     myCat.get_name();
     myCat.say_meow();
 
+!SLIDE center transition=scrollUp
+![](img/01-inheritance.png)
+
+!SLIDE center transition=fade
+![](img/02-inheritance.png)
+
+!SLIDE center transition=fade
+![](img/03-inheritance.png)
+
+!SLIDE center transition=fade
+![](img/04-inheritance.png)
+
 !SLIDE execute transition=scrollUp
 # Pseudoclassical inheritance #
 
@@ -47,6 +59,15 @@
     CORE.out(myKitten.name);
     myKitten.say_meow();
     myKitten.purr();
+
+!SLIDE center transition=scrollUp
+![](img/05-inheritance.png)
+
+!SLIDE center transition=fade
+![](img/06-inheritance.png)
+
+!SLIDE center transition=fade
+![](img/07-inheritance.png)
 
 !SLIDE bullets incremental transition=scrollUp
 # Problems #
