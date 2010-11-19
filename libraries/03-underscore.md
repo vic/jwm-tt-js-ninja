@@ -1,16 +1,12 @@
-!SLIDE bullets incremental transition=scrollUp
+!SLIDE subsection transition=scrollUp
 # Underscore.js #
-
-* Quick overview
-* Use _.mixin() to add your functions (don't augment the basic types)
 
 !SLIDE bullets incremental transition=scrollUp
 # Functional Programming #
 
-* Mathematical pure-functions.
-* No side effects.
-* Functional style programming.
+* Collection of useful functions
 * Everything under the _ namespace.
+* Functional style programming.
 
 !SLIDE bullets incremental transition=scrollUp
 # Underscore / Objects #
@@ -18,6 +14,7 @@
 * extend
 * clone
 * tap
+* mixin to add your functions (don't augment the basic types)
 
 
 !SLIDE bullets incremental transition=scrollUp
@@ -32,8 +29,27 @@
 # Underscore Collections Example #
 
     @@@ javaScript
-    some underscore examples
+    // object-oriented way
+    _(['John', 'Paul', 'George', 'Ringo']).each(function(beatle) {
+        console.log(beatle);
+    });
 
+    // functional way
+    _.each(['John', 'Paul', 'George', 'Ringo'], function(beatle) {
+       console.log(beatle);
+    });
+
+    _.reduce([1.5,2,3.7], 0, function(memo, num) { return memo + Math.floor(num) });
+    // => 6
+
+    var beatles = [
+     {name: 'John', dead: true},
+     {name: 'Paul', dead: false},
+     {name: 'Ringo', dead: false},
+     {name: 'George', dead: true}
+    ]
+
+    _.pluck(beatles, 'name');
 
 !SLIDE bullets incremental transition=scrollUp
 # Underscore / Functions #
