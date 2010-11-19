@@ -1,11 +1,11 @@
 !SLIDE bullets incremental transition=scrollUp
 # CommonJS #
 
+* Conventions/Standards in Browser/Server.
 * Modules
-* Just-In-Time Resource Loading
+* RequireJS. Just-In-Time Resource Loading
 * Dependency management
 * Large javascript libraries.
-* RequireJS - browser side.
 
 !SLIDE execute transition=scrollUp
 # RequireJS Module Structure #

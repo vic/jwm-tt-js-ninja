@@ -20,22 +20,6 @@
 * __this__ is bound to the global namespace
 
 !SLIDE execute transition=scrollUp
-# Scope #
-
-## No block scope in JavaScript ##
-
-    @@@ javaScript
-    var foo = function() {
-        var a = 'test';
-        if ( a === 'test' ) {
-            var b = true;
-        }
-        CORE.out(b);
-    }();
-    CORE.out(foo);
-## Declare variables at the start of functions ##
-
-!SLIDE execute transition=scrollUp
 # != and == #
 
 ## Will compare values of different types ##

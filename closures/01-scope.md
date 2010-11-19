@@ -26,4 +26,19 @@
     fun();
 
 
+!SLIDE execute transition=scrollUp
+# Scope #
+
+## No block scope in JavaScript ##
+
+    @@@ javaScript
+    var foo = function() {
+        var a = 'test';
+        if ( a === 'test' ) {
+            var b = true;
+        }
+        CORE.out(b);
+    }();
+    CORE.out(foo);
+## Declare variables at the start of functions ##
 

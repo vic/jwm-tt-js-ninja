@@ -3,11 +3,9 @@
 # Libraries #
 
 !SLIDE bullets incremental transition=scrollUp
-# Libraries #
+# Useful Libraries #
 
 * CommonJS
 * Underscore.js
 * Backbone.js
-* CoffeeScript
-* JSClass
 
