@@ -1,4 +1,4 @@
-new(function(){
+new(function($){
 
   var initialize = function(){
     $("#footer").append("<img id=ninja-logo src='/image/ninja2.sm.jpg'>")
