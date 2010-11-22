@@ -39,9 +39,17 @@
        console.log(beatle);
     });
 
+!SLIDE execute transition=scrollUp
+# Underscore Collections Example #
+
+    @@@ javaScript
     _.reduce([1.5,2,3.7], 0, function(memo, num) { return memo + Math.floor(num) });
     // => 6
 
+!SLIDE execute transition=scrollUp
+# Underscore Collections Example #
+
+    @@@ javaScript
     var beatles = [
      {name: 'John', dead: true},
      {name: 'Paul', dead: false},

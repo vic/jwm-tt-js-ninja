@@ -5,7 +5,7 @@
 !SLIDE bullets incremental transition=scrollUp
 # Useful Libraries #
 
-* CommonJS
 * Underscore.js
+* CommonJS
 * Backbone.js
 

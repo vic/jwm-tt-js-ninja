@@ -10,5 +10,3 @@
 * Dependency management
 * Organized JavaScript Libraries.
 
-!SLIDE subsection transition=scrollUp
-# CommonJS Demo #

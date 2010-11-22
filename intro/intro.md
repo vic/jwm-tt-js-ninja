@@ -20,7 +20,6 @@
 * Augmenting the basic types
 * Inheritance
 * Bad parts
-* Dev tools
 * Libraries
 * Quality
 
