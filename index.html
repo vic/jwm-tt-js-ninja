@@ -1,0 +1,1097 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Becoming a JavaScript Ninja</title>
+
+  <link rel="stylesheet" href=".css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href=".css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src=".js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src=".js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src=".js/jquery-print.js"></script>
+  <script type="text/javascript" src=".js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src=".js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src=".js/fg.menu.js"></script>
+  <script type="text/javascript" src=".js/showoff.js"></script>
+  <script type="text/javascript" src=".js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src=".js/sh_main.min.js"></script>
+  <script type="text/javascript" src=".js/core.js"></script>
+  <script type="text/javascript" src=".js/showoffcore.js"></script>
+
+  <link type="text/css" href=".css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href=".css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href=".css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/style.css" type="text/css"/>
+  
+
+  
+    <script type="text/javascript" src="file/scripts.js"></script>
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, '.');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="intro/intro/1">
+<h1>Becoming a JavaScript Ninja</h1>
+
+<h3><a href="http://vic.github.com/jwm-tt-js-ninja">http://vic.github.com/jwm-tt-js-ninja</a></h3>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="intro/intro/2">
+<h1>How did you learn JavaScript?</h1>
+
+<ul>
+<li>Read the spec, tutorials, examples, etc.</li>
+<li>Started hacking because it looks like Java</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content smbullets incremental" ref="intro/intro/3">
+<h1>Overview</h1>
+
+<ul>
+<li>Quick intro</li>
+<li>Object literals</li>
+<li>Functional language (lambda!)</li>
+<li>Closures</li>
+<li>Modules and scope</li>
+<li>Augmenting the basic types</li>
+<li>Inheritance</li>
+<li>Bad parts</li>
+<li>Libraries</li>
+<li>Quality</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental small" ref="intro/intro/4">
+<h1>Breif history</h1>
+
+<ul>
+<li>1995 - LiveScript (Netscape: Brendan Eich)</li>
+<li>Renamed to JavaScript - Netscape and Sun marketing deal?</li>
+<li>1996 - Microsoft's JScript (trademark issues)</li>
+<li>Battle between Netscape and Microsoft</li>
+<li>1997 - ECMAScript (standarization)</li>
+<li>1998 - W3C DOM Level 1</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="intro/intro/5">
+<h1>Influences</h1>
+
+<ul>
+<li><strong>Self</strong>: prototypal inheritance, dynamic objects</li>
+<li><strong>Scheme</strong>: lambda, loose typing</li>
+<li><strong>Java</strong>: syntax, conventions</li>
+<li><strong>Perl</strong>: regular expressions</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="literals/literals/1">
+<h1>Objects</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="literals/literals/2">
+<h1>Think of them as light hashmaps.</h1>
+
+<pre class="sh_javaScript"><code>var person = { name: "Joe", age: 28 };</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="literals/literals/3">
+<h1>Everything is accessible.</h1>
+
+<pre class="sh_javaScript"><code>person.name = "Bad";
+person["name"] = "Ugly";</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="literals/literals/4">
+<h1>Arrays</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="literals/literals/5">
+<h1>Untyped collections</h1>
+
+<pre class="sh_javaScript"><code>var clients = [
+    'posadas', 'telcel', 'palacio'
+];
+result = clients.length; // -&gt; 3</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="literals/literals/6">
+<h1>Undefined values</h1>
+
+<h2>pretty much everything not available in scope</h2>
+
+<pre class="sh_javaScript"><code>result = typeof(something) === "undefined";</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="expressions/expression/1">
+<h1>Statements / Expressions</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets" ref="expressions/expression/2">
+<h1>Expression</h1>
+
+<h2>always yields a value</h2>
+
+<pre class="sh_javaScript"><code>"Hello World"
+foo = 3.1459 * 2
+mux = foo == bar ? baz : qux</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets" ref="expressions/expression/3">
+<h1>Statement</h1>
+
+<h2>just <em>do</em> something</h2>
+
+<pre class="sh_javaScript"><code>if(cond) { expr } else { expr2 }
+while(cond) { expr }
+for(init; cond; incr) { expr }
+for(var idx in object) { expr }</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="expressions/expression/4">
+<h1>Statement vs Expression</h1>
+
+<h2>Statement dont yield value</h2>
+
+<pre class="sh_javaScript"><code>// Syntax error !
+// Tried to use statement as expression.
+result = if(1 &gt; 2) { "hm" } else { "uh?" }</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="functions/01-functions/1">
+<h1>Functions</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="functions/01-functions/2">
+<h1>Functional language</h1>
+
+<ul>
+<li>Functions are first class citizens</li>
+<li>Functions are objects</li>
+<li>Only way to have scope</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/3">
+<h1>Function definition statement</h1>
+
+<h2>imperative style</h2>
+
+<pre class="sh_javaScript"><code>// statement
+function foo() {}
+
+CORE.out( typeof foo );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/4">
+<h1>Function definition expression</h1>
+
+<h2>functional style</h2>
+
+<pre class="sh_javaScript"><code>// expression
+var foo = function() {}
+
+CORE.out( typeof foo );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/5">
+<h1>But wait .. what if I try to combine them</h1>
+
+<pre class="sh_javaScript"><code>var foo = function bar() {}
+
+CORE.out( typeof foo ); // function
+CORE.out( typeof bar ); // undefined</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/6">
+<h1>Advice</h1>
+
+<h2>Always use try to use expressions</h2>
+
+<pre class="sh_javaScript"><code>// Assign anonymous functions to
+// scoped variables.
+var foo = function() {  }</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="functions/01-functions/7">
+<h1>Functions</h1>
+
+<ul>
+<li>dont even need a name</li>
+<li>dont need a fixed set of parameters</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/8">
+<h1>Anonymous functions</h1>
+
+<pre class="sh_javaScript"><code>my_link.bind('click', function(e) {
+    e.preventDefault();
+    alert('You cliked the link');
+};
+
+setTimeout(function() {
+    alert('Timeout triggered');
+}, 100);</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/9">
+<h1>Anonymous funtions</h1>
+
+<h2>dont need to be named</h2>
+
+<pre class="sh_javaScript"><code>(function(msg){
+  alert("hello "+msg);
+ })("world");</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/10">
+<h1>Anonymous funtions</h1>
+
+<h2>weak typed / unchecked arity</h2>
+
+<pre class="sh_javaScript"><code>var fun = function(a, b) {
+  CORE.out( a + b );
+}
+fun();
+fun("hey");
+fun("whats", "up");
+fun(14, 10);
+fun("weak", 10);</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="functions/01-functions/11">
+<h1>dynamic function arguments</h1>
+
+<h2>you can use the special <strong>arguments</strong> object</h2>
+
+<pre class="sh_javaScript"><code>var fun = function() { // no parameter names
+   CORE.out(arguments.length);
+   var name = arguments[0];
+   if("function" === typeof(arguments[1])) {
+     CORE.out("second argument is a function");
+   }
+}
+fun();
+fun("hey", function() { foo }, "this");</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/01-functions/12">
+<h1>Self referencing functions</h1>
+
+<h2><strong>arguments.callee</strong> holds a reference to itself</h2>
+
+<pre class="sh_javaScript"><code>var fun = function() {
+   CORE.out( arguments.callee.toString() );
+}
+fun();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="functions/01-functions/13">
+<h1>Self referencing functions</h1>
+
+<h2><strong>arguments.callee</strong> holds a reference to itself</h2>
+
+<pre class="sh_javaScript"><code>var fun = function(arg) {
+   // the function being executed
+   var self = arguments.callee;
+
+   // this can be useful for memoizing data
+   var cache = self.cache || {}
+     , value = self.cache[arg] || exp(arg);
+   self.cache[arg] = value;
+
+   return cached;
+}
+fun("something");</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="functions/02-invocation/1">
+<h1>Function invocation patterns</h1>
+
+<ul>
+<li>Function invocation pattern</li>
+<li>Method invocation pattern</li>
+<li>Constructor invocation pattern</li>
+<li>Apply / Call invocation pattern</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/02-invocation/2">
+<h1>Function</h1>
+
+<h2>Function is <strong>not</strong> a property of an object</h2>
+
+<h2><strong>this</strong> is bound to the global object</h2>
+
+<pre class="sh_javaScript"><code>
+window.name = 'John';
+var get_name = function() {
+    return this.name;
+};
+result = get_name();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/02-invocation/3">
+<h1>Method</h1>
+
+<h2>Function <strong>is</strong> a property of an object</h2>
+
+<h2><strong>this</strong> is bound to that object</h2>
+
+<pre class="sh_javaScript"><code>
+var person = {
+    name: 'John Lennon',
+    get_name: function() {
+        return this.name;
+    }
+};
+result = person.get_name();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/02-invocation/4">
+<h1>Constructor</h1>
+
+<h2>Function is invoked with <strong>new</strong> prefix</h2>
+
+<h2><strong>this</strong> is bound to a new object</h2>
+
+<h2>The object will have a hidden link to the function's prototype</h2>
+
+<pre class="sh_javaScript"><code>
+var Person = function() {
+    this.name = 'John';
+};
+var someone = new Person();
+var someone_else = new Person();
+CORE.out(someone === someone_else);
+CORE.out(someone.name === someone_else.name);</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/02-invocation/5">
+<h1>Apply / Call</h1>
+
+<h2>Functions can have methods</h2>
+
+<h2><em>apply</em> and <em>call</em> are methods of <em>Function</em></h2>
+
+<h2>We can choose the value of <strong>this</strong></h2>
+
+<pre class="sh_javaScript"><code>var person = {
+    greet: function() {
+        return 'Hello ' + (this.name || '');
+    }
+};
+CORE.out( person.greet() );
+CORE.out( person.greet.apply({name: 'John'}) );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="functions/02-invocation/6">
+<h1>Apply / Call</h1>
+
+<pre class="sh_javaScript"><code>var add = function() {
+    var i, sum = this.memory || 0;
+    for (i = 0; i &lt; arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return (this.memory = sum);
+};
+CORE.out( add(1, 2, 3) );
+CORE.out( add.apply({memory: 10}, [1, 2, 3]) );
+
+CORE.out( add.call({memory: 21}, 1, 2, 3, 4) );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="closures/01-scope/1">
+<h1>Scope</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="closures/01-scope/2">
+<h1>Local Variables</h1>
+
+<pre class="sh_javaScript"><code>var fun = function() {
+  var baz = "Hello World";
+  CORE.out(baz);
+}
+fun();
+CORE.out( typeof baz );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="closures/01-scope/3">
+<h1>Free Variables</h1>
+
+<pre class="sh_javaScript"><code>var baz = "Hello World";
+var fun = function() { CORE.out(baz); }
+fun();
+baz = "Goodbye World";
+fun();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="closures/01-scope/4">
+<h1>Scope</h1>
+
+<h2>No block scope in JavaScript</h2>
+
+<pre class="sh_javaScript"><code>var foo = function() {
+    var a = 'test';
+    if ( a === 'test' ) {
+        var b = true;
+    }
+    CORE.out(b);
+}();
+CORE.out(foo);</code></pre>
+
+<h2>Declare variables at the start of functions</h2>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="closures/02-closures/1">
+<h1>Closures</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="closures/02-closures/2">
+<h1>Closures ?</h1>
+
+<h1>Capturing the lexical scope</h1>
+
+<h2>Yes, pretty simple concept</h2>
+
+<pre class="sh_javaScript"><code>var mult = function(a) {
+    return function(b) {
+        return a * b;
+    }
+}
+var twice = mult(2);
+CORE.out( twice(12) );
+CORE.out( mult(12)(12) );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets" ref="closures/02-closures/3">
+<h1>Why do I need them?</h1>
+
+<ul>
+<li>Real Private access.</li>
+<li>Only expose your API interface.</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="closures/02-closures/4">
+<h1>Closures Example</h1>
+
+<pre class="sh_javaScript"><code>var obtainAPI = function(url) {
+    var thisIsPrivate = someOperation(url);
+    var foo = funcion(a, callback) {
+        var res = foo(thisIsPrivate + a);
+        callback(res);
+    }
+    return {
+        exposedMethod: doBlah
+    }
+}
+
+var api = optainAPI("jwmsolutions.com");
+api.exposedMethod("cool", function(resp) {
+    console.debug(resp);
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="modules/modules/1">
+<h1>Encapsulation</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets" ref="modules/modules/2">
+<h1>Plain javascript objects</h1>
+
+<h2>having values/functions as properties</h2>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="modules/modules/3">
+<h1>Singleton with encapsulation</h1>
+
+<pre class="sh_javaScript"><code>var mySingleton = (function() {
+    var myPrivateVar = 'hello world';
+    // more private vars
+    var myPrivateMethod = function() {};
+    // more private methods
+    return {
+        doSomething: function() {
+            return myPrivateVar.toUpperCase();
+        },
+        doSomethingElse: function() {
+            myPrivateMethod();
+        }
+    };
+})();
+CORE.out(mySingleton.doSomething());
+CORE.out(mySingleton.myPrivateVar);</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="augmenting/augmenting/1">
+<h1>Basic types</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="augmenting/augmenting/2">
+<h1>Augmenting the basic types</h1>
+
+<ul>
+<li>Function.prototype</li>
+<li>Object.prototype</li>
+<li>String.prototype</li>
+<li>Array.prototype</li>
+<li>Number.prototype</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute small" ref="augmenting/augmenting/3">
+<h1>Integer part of a number</h1>
+
+<pre class="sh_javaScript"><code>Number.prototype.integer = function() {
+    return Math[this &lt; 0 ? 'ceil' : 'floor'](this);
+};
+
+var a = 10, b = 10.21, c = -12.84;
+
+CORE.out(a.integer());
+CORE.out(b.integer());
+CORE.out(c.integer());</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="augmenting/augmenting/4">
+<h1>Function chaining</h1>
+
+<pre class="sh_javaScript"><code>Function.prototype.andThen = function(g) {
+    var f = this;
+    return function() {
+        f();
+        g();
+    };
+};
+
+var sayHi = function() { 
+    CORE.out('Hello, world!');
+};
+var sayBye = function() {
+    CORE.out('Goodbye!');
+};
+
+sayHi.andThen(sayBye)();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute small" ref="augmenting/augmenting/5">
+<h1>Callback manager</h1>
+
+<pre class="sh_javaScript"><code>Function.prototype.andThen = function(g) {
+    var f = this; return function() { f(); g(); };
+};
+var Manager = function() {
+    this.callback = function() {};
+    this.registerCallback = function(f) {
+        this.callback = (this.callback).andThen(f);
+    };
+};
+var sayHi = function() { CORE.out('Hello, world!'); };
+var sayBye = function() { CORE.out('Goodbye!'); };
+
+var manager = new Manager();
+manager.registerCallback(sayHi);
+manager.registerCallback(sayBye);
+manager.registerCallback(sayHi);
+
+manager.callback();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="inheritance/01-inheritance/1">
+<h1>Inheritance</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="inheritance/01-inheritance/2">
+<h1>Prototypal inheritance</h1>
+
+<ul>
+<li>No classes in JavaScript, only objects</li>
+<li>Objects inherit directly from other objects</li>
+<li>What matters is what an object can do, not the lineage</li>
+<li>JavaScript supports many code reuse patterns</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/02-pseudoclassical/1">
+<h1>Constructors</h1>
+
+<pre class="sh_javaScript"><code>var Cat = function(name) {
+    this.name = name;
+};
+
+var myCat = new Cat("micha");
+CORE.out( myCat.name );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/02-pseudoclassical/2">
+<h1>Constructor prototype</h1>
+
+<pre class="sh_javaScript"><code>var Cat = function(name) {
+    this.name = name;
+};
+Cat.prototype.get_name = function() {
+    CORE.out( this.name );
+};
+Cat.prototype.say_meow = function() {
+    CORE.out( 'meow' );
+};
+
+var myCat = new Cat("micha");
+myCat.get_name();
+myCat.say_meow();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content center" ref="inheritance/02-pseudoclassical/3">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/01-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content center" ref="inheritance/02-pseudoclassical/4">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/02-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content center" ref="inheritance/02-pseudoclassical/5">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/03-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content center" ref="inheritance/02-pseudoclassical/6">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/04-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/02-pseudoclassical/7">
+<h1>Pseudoclassical inheritance</h1>
+
+<pre class="sh_javaScript"><code>var Cat = function(name) { this.name = name; };
+Cat.prototype.say_meow = function() {
+    CORE.out('meow');
+};
+
+var Kitten = function(name) {
+    this.name = name;
+};
+Kitten.prototype = new Cat();
+Kitten.prototype.purr = function() {
+    CORE.out('r-r-r-r-r');
+};
+var myKitten = new Kitten("catrin");
+CORE.out(myKitten.name);
+myKitten.say_meow();
+myKitten.purr();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content center" ref="inheritance/02-pseudoclassical/8">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/05-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content center" ref="inheritance/02-pseudoclassical/9">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/06-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content center" ref="inheritance/02-pseudoclassical/10">
+<p><img src="file:///home/eduardo/Documents/git_repos/eduardo/presentations/jwm-tt-js-ninja/inheritance/img/07-inheritance.png" width="800" height="599" alt=""/></p>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="inheritance/02-pseudoclassical/11">
+<h1>Problems</h1>
+
+<ul>
+<li>No encapsulation</li>
+<li>Weird syntax</li>
+<li>Duplication of code (constructors)</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/03-prototypal/1">
+<h1>Pure prototypal inheritance</h1>
+
+<pre class="sh_javaScript"><code>Object.create = function(o) {
+    var F = function() {};
+    F.prototype = o;
+    return new F();
+};</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/03-prototypal/2">
+<h1>Pure prototypal inheritance</h1>
+
+<pre class="sh_javaScript"><code>var cat = {
+    name: "",
+    get_name: function() {
+        CORE.out(this.name);
+    },
+    say_meow: function() {
+        CORE.out('meow');
+    }
+};
+
+var myCat = Object.create(cat);
+myCat.name = "micha";
+myCat.get_name();
+myCat.say_meow();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/03-prototypal/3">
+<pre class="sh_javaScript"><code>var cat = {
+    name: "",
+    get_name: function() {
+        CORE.out(this.name);
+    }
+};
+var kitten = Object.create(cat);
+kitten.name = "catrin";
+kitten.say_meow = function() {
+    CORE.out('meow');
+};
+
+kitten.get_name();
+kitten.say_meow();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="inheritance/03-prototypal/4">
+<h1>Pure prototypal inheritance</h1>
+
+<ul>
+<li>Very simple</li>
+<li>"Differential" inheritance</li>
+<li>No longer need to use <strong>new</strong></li>
+<li>Don't have to worry about <strong>prototype</strong></li>
+<li>Still no encapsulation</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="inheritance/04-parasitic/1">
+<h1>Power constructors</h1>
+
+<ul>
+<li>Object factories</li>
+<li>Use functions to have scope</li>
+<li>Very similar to singleton pattern</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/04-parasitic/2">
+<pre class="sh_javaScript"><code>var cat = function(name) {
+    var meow = 'meow';
+    var do_meow = function() {
+        CORE.out(meow);
+    };
+    return {
+        get_name: function() {
+            CORE.out(name);
+        },
+        say_meow: function() {
+            do_meow();
+        }
+    };
+};
+var myCat = cat("micha");
+CORE.out(typeof myCat.name);
+myCat.get_name();
+myCat.say_meow();
+CORE.out(typeof myCat.do_meow);</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="inheritance/04-parasitic/3">
+<h1>"Parasitic" inheritance</h1>
+
+<ul>
+<li>Create a new object</li>
+<li>Add private variables and methods</li>
+<li>Augment the new object with methods</li>
+<li>Return the new object</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/04-parasitic/4">
+<pre class="sh_javaScript"><code>var cat = function(spec) {
+    var that = {};
+    var do_meow = function() {
+        CORE.out('meow');
+    };
+
+    that.get_name = function() {
+        CORE.out(spec.name);
+    };
+    that.say_meow = function() {
+        do_meow();
+    };
+    return that;
+};
+
+var myCat = cat({name: 'micha'});
+CORE.out(typeof myCat.name);
+myCat.get_name();
+myCat.say_meow();
+CORE.out(typeof myCat.do_meow);</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="inheritance/04-parasitic/5">
+<pre class="sh_javaScript"><code>var cat = function(spec) {
+    return {
+        get_name: function() {
+            CORE.out(spec.name);
+        }
+    };
+};
+var kitten = function(spec) {
+    var that = cat(spec);
+    var do_purr = function() {
+        CORE.out('r-r-r-r-r');
+    };
+    that.purr = function() {
+        do_purr();
+    };
+    return that;
+};
+var myKitten = kitten({name: 'catrin'});
+myKitten.get_name();
+myKitten.purr();</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="bad-parts/bad-parts/1">
+<h1>Bad parts</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="bad-parts/bad-parts/2">
+<h1>Global variables</h1>
+
+<ul>
+<li>JavaScript doesn't have a linker</li>
+<li>Uses the global namespace for binding</li>
+<li>As an app grows, bad things happen</li>
+<li>What about mashups?</li>
+<li>Don't pollute the global namespace!</li>
+<li>Like all martial arts requires discipline</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="bad-parts/bad-parts/3">
+<h1>new</h1>
+
+<ul>
+<li>What happens when you invoke a constructor without new?</li>
+<li>It's a normal function call</li>
+<li><strong>this</strong> is bound to the global namespace</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="bad-parts/bad-parts/4">
+<h1>!= and ==</h1>
+
+<h2>Will compare values of different types</h2>
+
+<h2>( automatic type coercion )</h2>
+
+<pre class="sh_javaScript"><code>CORE.out( '' == '0' );
+CORE.out( 0 == '' );
+CORE.out( 0 == '0' );
+CORE.out( false == 'false' );
+CORE.out( false == '0' );
+CORE.out( false == undefined );
+CORE.out( false == null );
+CORE.out( null == undefined );
+CORE.out( ' \t\r\n ' == 0 );</code></pre>
+
+<h2>Use <strong>!==</strong> and <strong>===</strong> instead</h2>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="bad-parts/bad-parts/5">
+<h1>Semicolon insertion</h1>
+
+<ul>
+<li>Missing semicolons are automatically inserted</li>
+<li>Optional but may cause problems with some minimizers</li>
+<li>It can mask more serious errors</li>
+<li>Don't depend on this</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="bad-parts/bad-parts/6">
+<h1>Semicolon insertion</h1>
+
+<pre class="sh_javaScript"><code>var output = function() {
+    return
+    {
+        status: true
+    }
+}();
+
+CORE.out( output );
+CORE.out( output &amp;&amp; output.status );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="bad-parts/bad-parts/7">
+<h1>eval</h1>
+
+<ul>
+<li><em>eval</em> is evil</li>
+<li>Harder to read</li>
+<li>Slower (needs to run the compiler)</li>
+<li>Can compromise security</li>
+<li>Try to avoid it whenever possible</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="bad-parts/bad-parts/8">
+<h1>Reserved words</h1>
+
+<pre class="sh_javaScript"><code>abstract boolean break byte
+case catch char class const continue
+debugger default delete do double
+else enum export extends
+false final finally float for function goto
+if implements import in instanceof int
+interface long native new null
+package private protected public return
+short static super switch synchronized
+this throw throws transient true try typeof
+var volatile void while with</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="bad-parts/bad-parts/9">
+<h1>typeof &amp; NaN</h1>
+
+<pre class="sh_javaScript"><code>
+CORE.out( typeof null );
+CORE.out( typeof NaN );
+
+CORE.out( NaN === NaN );
+CORE.out( isNaN(NaN) );</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="libraries/01-libraries/1">
+<h1>Libraries</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/01-libraries/2">
+<h1>Useful Libraries</h1>
+
+<ul>
+<li>Underscore.js</li>
+<li>CommonJS</li>
+<li>Backbone.js</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="libraries/02-underscore/1">
+<h1>Underscore.js</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/02-underscore/2">
+<h1>Functional Programming</h1>
+
+<ul>
+<li>Collection of useful functions</li>
+<li>Everything under the _ namespace.</li>
+<li>Functional style programming.</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/02-underscore/3">
+<h1>Underscore / Objects</h1>
+
+<ul>
+<li>keys/values</li>
+<li>extend</li>
+<li>clone</li>
+<li>tap</li>
+<li>mixin to add your functions (don't augment the basic types)</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/02-underscore/4">
+<h1>Underscore / Collections</h1>
+
+<ul>
+<li>each</li>
+<li>map/reduce</li>
+<li>sortBy</li>
+<li>select/reject/include/all</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="libraries/02-underscore/5">
+<h1>Underscore Collections Example</h1>
+
+<pre class="sh_javaScript"><code>// object-oriented way
+_(['John', 'Paul', 'George', 'Ringo']).each(function(beatle) {
+    console.log(beatle);
+});
+
+// functional way
+_.each(['John', 'Paul', 'George', 'Ringo'], function(beatle) {
+   console.log(beatle);
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="libraries/02-underscore/6">
+<h1>Underscore Collections Example</h1>
+
+<pre class="sh_javaScript"><code>_.reduce([1.5,2,3.7], 0, function(memo, num) { return memo + Math.floor(num) });
+// =&gt; 6</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content execute" ref="libraries/02-underscore/7">
+<h1>Underscore Collections Example</h1>
+
+<pre class="sh_javaScript"><code>var beatles = [
+ {name: 'John', dead: true},
+ {name: 'Paul', dead: false},
+ {name: 'Ringo', dead: false},
+ {name: 'George', dead: true}
+]
+
+_.pluck(beatles, 'name');</code></pre>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/02-underscore/8">
+<h1>Underscore / Functions</h1>
+
+<ul>
+<li>defer</li>
+<li>bind</li>
+<li>compose</li>
+<li>memoize</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="libraries/03-requirejs/1">
+<h1>CommonJS</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/03-requirejs/2">
+<h1>CommonJS</h1>
+
+<ul>
+<li>Standard library</li>
+<li>Modules</li>
+<li>Just-In-Time Resource Loading</li>
+<li>Dependency management</li>
+<li>Organized JavaScript Libraries.</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="libraries/04-backbone/1">
+<h1>Backbone.js</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="libraries/04-backbone/2">
+<h1>Application structure</h1>
+
+<ul>
+<li>Structure for JavaScript-heavy applications</li>
+<li>Models, Views, Controllers</li>
+<li>Event handling</li>
+<li>History</li>
+<li>RESTful interface with backend</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="libraries/04-backbone/3">
+<h1>Quick Demo</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content subsection" ref="quality/quality/1">
+<h1>Code Quality</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="quality/quality/2">
+<h1>JSLint</h1>
+
+<ul>
+<li><a href="http://www.jslint.com">JSLint.com</a></li>
+<li>Code Quality Tool</li>
+<li>Warnings about the bad parts of JavaScript</li>
+<li>Check your code!</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content bullets incremental" ref="quality/quality/3">
+<h1>Unit tests</h1>
+
+<ul>
+<li><a href="http://docs.jquery.com/QUnit">QUnit</a></li>
+<li><a href="http://code.google.com/p/js-test-driver/">js-test-driver</a></li>
+<li><a href="http://pivotal.github.com/jasmine/">Jasmine</a></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="outro/outro/1">
+<h1>Questions?</h1>
+</div>
+</div><div class="slide" data-transition="scrollUp"><div class="content" ref="outro/outro/2">
+<h1>Thank you!</h1>
+</div>
+</div>
+</div>
+
+</body>
+</html>
